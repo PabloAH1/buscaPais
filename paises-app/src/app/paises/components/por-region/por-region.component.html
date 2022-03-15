@@ -1,0 +1,20 @@
+<h2>Por Región</h2>
+
+<hr>
+
+<div class="row">
+  <div class="col">
+    <app-pais-input (onEnter)="buscar($event)"></app-pais-input>
+
+  </div>
+</div>
+<hr>
+<div class="alert alert-danger">
+  No se encontraron resultados con la busqueda ingresada
+</div>
+
+<div class="row" *ngIf="!exiteError">
+  <div class="col">
+    <app-pais-tabla [paises]="paises"></app-pais-tabla>
+  </div>
+</div>
